@@ -1,0 +1,36 @@
+﻿@model PagedList.IPagedList<JBA.Models.SimpleData>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Imported Data Result";
+}
+
+<h2>Uploaded Data</h2>
+
+<table class="table  table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Grid Reference X</th>
+            <th scope="col">Grid Reference Y</th>
+            <th scope="col">Date of result</th>
+            <th scope="col">Precipitation (mm)</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(dataItem => data.XRef)</td>
+            <td>@Html.DisplayFor(dataItem => data.YRef)</td>
+            <td>@Html.DisplayFor(dataItem => data.Date)</td>
+            <td>@Html.DisplayFor(dataItem => data.Value)</td>
+
+        </tr>
+
+    }
+    </tbody>
+</table>
+
+<p>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</p>
+
+@Html.PagedListPager(Model, page => Url.Action("UploadedData", new { page }))

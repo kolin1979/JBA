@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBA", "JBA\JBA.csproj", "{8302C70E-E9A2-4533-BC1A-12DAFE8ABAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBA.Tests", "JBA.Tests\JBA.Tests.csproj", "{D47E2981-693C-470F-AA65-82DB92D7278D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8302C70E-E9A2-4533-BC1A-12DAFE8ABAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8302C70E-E9A2-4533-BC1A-12DAFE8ABAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8302C70E-E9A2-4533-BC1A-12DAFE8ABAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8302C70E-E9A2-4533-BC1A-12DAFE8ABAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47E2981-693C-470F-AA65-82DB92D7278D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47E2981-693C-470F-AA65-82DB92D7278D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47E2981-693C-470F-AA65-82DB92D7278D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47E2981-693C-470F-AA65-82DB92D7278D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

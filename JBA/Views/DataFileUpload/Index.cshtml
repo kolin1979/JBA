@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        Data File Upload
+    </div>
+    <div class="card-body">
+@using (Html.BeginForm("DataFileUpload", "DataFileUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <div class="form-group">
+        <label for="txtRowNumbersDescription">Row numbers for data file description (e.g. 1,2,3)</label>
+        @Html.TextBox("txtRowNumbersDescription", "1,2,3", new { @class="form-control  form-control-lg"})
+    </div>
+    <div class="form-group">
+        <label>Row numbers for headers (e.g. 4,5)</label>
+        @Html.TextBox("txtRowNumbersHeaders", "4,5", new { @class="form-control  form-control-lg"})
+    </div>
+    <div class="form-group">
+        <label>Data Section starts at row (e.g. 6)</label>
+        @Html.TextBox("txtDataStartsAtRow", "6", new { @class="form-control  form-control-lg"})
+    </div>
+    <div class="form-group">
+        <label>Data Sections are seperated by the following text</label>
+        @Html.TextBox("txtDataSeperatedBy", "Grid-ref", new { @class="form-control  form-control-lg"})
+    </div>
+    <div class="form-group">
+        <label for="file">Data file to upload</label>
+        <input type="file" name="file" class="form-control-file" />
+    </div>
+    <input type="submit" name="Submit" id="Submit" class="btn btn-primary" value="Upload" />
+
+}
+
+        </div>
+</div>
