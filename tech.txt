@@ -1,0 +1,49 @@
+Technical Specification
+
+
+
+Assumptions
+Precipitation is rounded to the nearest integer in mm
+Lines are terminated with CRLF
+Headers start at line X and finish at line Y
+
+
+Open Questions
+
+
+Technical information
+---------------------
+
+Headers are in Square Braces
+January is first column
+December is last column
+First row is earliest year
+Last row is latest year
+
+
+Regex for \s*[\d]+\s*[\d]+\s*[\d]+
+
+Database Structure
+------------------
+
+[DataReference]
+DataReferenceID (int) (PK)
+LongtitudeX(decimal)
+LongtitudeY(decimal)
+LatitudeX(decimal)
+LatitudeY(decimal)
+Year(int)
+GridX(int)
+GridY(int)
+Boxes(int)
+Multi(decimal)
+Missing(int)
+
+[Data]
+DataID (int) (PK)
+DataReferenceID (int) (FK - References DataReferenceID)
+GridReferenceX (int)
+GridReferenceY (int)
+Month (int)
+Precipitation (int)
+ 
